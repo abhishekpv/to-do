@@ -1,0 +1,17 @@
+.playground-div {
+  border: 1px solid gray;
+  width: 60vw;
+  margin: 20px;
+  padding: 20px;
+}
+.chart{
+    width:100%;
+    height: 30px;
+}
+.progress-bar{
+    height:15px;
+}
+.timeline{
+    border-top: 1px solid black;
+}
+

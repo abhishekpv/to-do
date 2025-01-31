@@ -9,7 +9,7 @@
   align-items: start;
   gap: 1rem;
   min-height: 25rem;
-  min-width: 25rem;
+  min-width: 19rem;
   max-width: 30rem;
 }
 @media only screen and (max-width: 600px){

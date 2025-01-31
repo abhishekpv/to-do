@@ -1,6 +1,6 @@
 .todo-container {
   background-color: white;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
   border-radius: 1rem;
   box-shadow: 2px 1px 15px rgba(218, 218, 218, 0.596);
   display: flex;
@@ -51,14 +51,21 @@ input:focus {
   display: flex;
   width: 100%;
   gap: 5px;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
 }
 .todo-list {
   width: 100%;
   min-height: 18rem;
+  max-height: 70vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 25px;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+    scrollbar-width: none;
 }
 .todo-group{
   display: flex;
@@ -154,6 +161,8 @@ input:focus {
 @media only screen and (max-width: 600px){
   .todo-container{
     box-shadow: none;
+    background-color: transparent;
+    position: relative;
   }
   .todo-container > h2 {
     margin-bottom: 50px;

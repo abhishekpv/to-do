@@ -8,6 +8,9 @@ const TodoForm = ({ handleAddTodo }: PropsType) => {
   const [task, setTask] = useState("");
 
   const handleOnClick = () => {
+    if (task === "") {
+      return;
+    }
     handleAddTodo(task);
     setTask("");
   };
@@ -15,7 +18,7 @@ const TodoForm = ({ handleAddTodo }: PropsType) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setTask(e?.target?.value ?? "");
   };
-  
+
   return (
     <div className="todo-form">
       <input value={task} type="text" onChange={handleChange} />

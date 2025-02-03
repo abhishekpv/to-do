@@ -8,7 +8,7 @@ const TodoForm = ({ handleAddTodo }: PropsType) => {
   const [task, setTask] = useState("");
 
   const handleOnClick = () => {
-    if (task === "") {
+    if (task.trim() === "") {
       return;
     }
     handleAddTodo(task);

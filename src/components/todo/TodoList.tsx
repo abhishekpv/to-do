@@ -1,5 +1,7 @@
 import moment from "moment";
 import { TodoType } from "../../db";
+import TodoCard from "./TodoCard";
+import CompleteCard from "./CompleteCard";
 
 interface TodoListProps {
   handleCompleteTodo: (todo: TodoType) => Promise<void>;
@@ -28,21 +30,7 @@ const TodoList = ({
       <div className="todo-group">
         {inProgress.map((todo) => {
           return (
-            <div key={todo.id} className="todo-card">
-              <p>{todo.task}</p>
-              <div className="todo-card-footer">
-                <p>{moment(Number(todo.createdAt)).fromNow()}</p>
-                <p></p>
-              </div>
-              <button
-                className="complete-btn"
-                onClick={() => {
-                  handleCompleteTodo(todo);
-                }}
-              >
-                Mark as done
-              </button>
-            </div>
+            <TodoCard handleCompleteTodo={handleCompleteTodo} todo={todo} />
           );
         })}
       </div>
@@ -50,21 +38,7 @@ const TodoList = ({
         <p>Completed</p>
         {finished.map((todo) => {
           return (
-            <div key={todo.id} className="todo-card complete-card">
-              <p>{todo.task}</p>
-              <div className="todo-card-footer">
-                <p>{moment(Number(todo.createdAt)).fromNow()}</p>
-                <p>{moment(Number(todo.completedAt)).fromNow()}</p>
-              </div>
-              <button
-                className="remove-btn"
-                onClick={() => {
-                  todo.id && handleDeleteTodo(todo.id);
-                }}
-              >
-                Delete
-              </button>
-            </div>
+            <CompleteCard handleDeleteTodo={handleDeleteTodo} todo={todo} />
           );
         })}
       </div>

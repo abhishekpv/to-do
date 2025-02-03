@@ -1,6 +1,5 @@
 import moment from "moment";
 import { TodoType } from "../../db";
-import { TouchEventHandler, useEffect, useRef, useState } from "react";
 
 const TodoCard = ({
   todo,

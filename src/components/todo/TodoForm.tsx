@@ -11,7 +11,7 @@ const TodoForm = ({ handleAddTodo }: PropsType) => {
     if (task.trim() === "") {
       return;
     }
-    handleAddTodo(task);
+    handleAddTodo(task);  
     setTask("");
   };
 

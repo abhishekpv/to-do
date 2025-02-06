@@ -1,7 +1,7 @@
 {
   "name": "To do",
   "short_name": "To do",
-  "start_url": "/",
+  "start_url": "../",
   "icons": [
     {
       "src": "icons/manifest-icon-192.maskable.png",

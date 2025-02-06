@@ -1,4 +1,3 @@
-import moment from "moment";
 import { TodoType } from "../../db";
 import TodoCard from "./TodoCard";
 import CompleteCard from "./CompleteCard";
